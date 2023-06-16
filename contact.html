@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roselois - More Than Lifestyle</title>
+    <link rel="shortcut icon" type="x-icon" href="images/iconmonstr-flower-4-240.png">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/release/v5.10.0/css/all.
+    css"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <script src="script.js"></script>    
+
+    <section id="header">
+        <a href="index.html"><img src="images/roselois.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a  href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><img src="shopping-bag-regular-24.png" alt=""></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="page-header" class="contact-header">
+        <h2>#let's_talk</h2>
+        <p>LEAVE A MESSAGE! We love to hear from you.</p>
+    </section>
+
+    <section id="form-details">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <span>GET IN TOUCH</span>
+            <h2>We love to hear from you</h2>
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="E-mail">
+            <textarea id="message" cols="30" rows="10" placeholder="How can we help you?"></textarea>
+            <button class="normal" type="submit">Submit</button>
+        </form>
+
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                    Host : "smtp.elasticemail.com",
+                    Username : "username",
+                    Password : "password",
+                    To : 'them@website.com',
+                    From : "you@isp.com",
+                    Subject : "This is the subject",
+                    Body : "And this is the body"
+                }).then(
+                message => alert(message)
+                );
+            }
+        </script>
+
+        <div class="people">
+            <div>
+                <img src="images/people/1.png" alt="">
+                <p><span>Roseline Ijejejme</span> Founder <br>Phone: 0706 477 2613 <br> E-mail: ijejemeroseline@gmail.com</p>
+            </div>
+
+            <div>
+                <img src="images/people/praise.jpg" alt="">
+                <p><span>Praise Ijejeme</span> Website Designer <br>Phone: 0810 961 9460 <br> E-mail: realpeepmantis1@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/roselois.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address: </strong> Apo, Abuja, Nigeria.</p>
+            <p><strong>Phone: </strong> 0706 477 2613</p>
+            <p><strong>Hours: </strong> 9:00 - 21:00, Sun - Sat</p>
+
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <a href="facebook.com"> <img src="images/bxl-facebook.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="cart.html">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col pay">
+            <p>Secured Payment Methods</p>
+            <img src="images/pay/pay.png" alt="">
+        </div>
+
+        <div class="copyright">
+            <p>© 2023, Roselois - More Than Lifestyle</p>
+        </div>
+    </footer>
+
+</body>
+
+</html> 
